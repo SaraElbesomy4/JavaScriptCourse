@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Calculator</title>
+        <style> .h1 {color :brown;} </style> 
+        
+
+        <script type="text/javascript">
+			function add(){
+				n1=document.getElementById('num1').value;
+				n2=document.getElementById('num2').value;
+				
+                result = Number(n1) + Number(n2);
+                document.getElementById('result').value = result;	
+            }
+            
+            function subtract(){
+				n1=document.getElementById('num1').value;
+				n2=document.getElementById('num2').value;
+				
+                result = Number(n1) - Number(n2);
+                document.getElementById('result').value = result;	
+            }
+            
+            function multiply(){
+				n1=document.getElementById('num1').value;
+				n2=document.getElementById('num2').value;
+				
+                result = Number(n1) * Number(n2);
+                document.getElementById('result').value = result;	
+            }
+            
+            function divide(){
+				n1=document.getElementById('num1').value;
+				n2=document.getElementById('num2').value;
+				
+                result = Number(n1) / Number(n2);
+                document.getElementById('result').value = result;	
+			}
+        </script>
+        
+        
+    </head>
+
+    <body>
+        <h1 class="h1"> Calculator </h1> </h1>
+        <input type="text" id="num1" value="Enter first number..."  />
+        <input type="text" id="num2" value="Enter second number..." />
+        <input type="text" id="result" value="Result..." /><br><br><br>
+        <button type="button" onclick="add()" > Add </button><br><br>
+        <button type="button" onclick="subtract()" > Subtract </button><br><br>
+        <button type="button" onclick="multiply()" > Multiply </button><br><br>
+        <button type="button" onclick="divide()" > Divide </button><br><br>
+    </body>
+
+</html>
