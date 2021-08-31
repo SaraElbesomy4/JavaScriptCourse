@@ -1,4 +1,5 @@
 
+
 // Function to check that the user entered a valid name (any string)
 let checkName = function (Name){
     while( !Name){
@@ -165,29 +166,38 @@ let getHoroscope = function(Day, Month){
 
 // main code
 
-let name_string;
-let pass;
-let month;
-let day;
-let horo;
+var startHoroscope = function(){
 
-name_string = prompt("Please, Enter your name :"); 
-name_string = checkName(name_string)
+    let name_string;
+    let pass;
+    let month;
+    let day;
+    let horo;
 
-pass = prompt("Please, Enter your password :")
-flag = checkPass(pass);
+    name_string = prompt("Please, Enter your name :"); 
+    name_string = checkName(name_string)
 
-if ( flag === 2){
-    alert("You’ve entered a wrong password 3 times.")
-}
-else{
-    month = prompt("Please, Enter your birth month :")
-    month = checkMonth(month);
+    pass = prompt("Please, Enter your password :")
+    flag = checkPass(pass);
 
-    day = prompt("Please, Enter your birth day :")
-    day = checkDay(day, month);
+    if ( flag === 2){
+        alert("You’ve entered a wrong password 3 times.")
+    }
+    else{
+        month = prompt("Please, Enter your birth month :")
+        month = checkMonth(month);
+
+        day = prompt("Please, Enter your birth day :")
+        day = checkDay(day, month);
     
-    horo = getHoroscope(day,month)
-    alert("Hi " + name_string + ", " + "You are born in " + day + " / " + month + " so, your horoscope is " + horo + " ." )
+        horo = getHoroscope(day,month)
+        alert("Hi " + name_string + ", " + "You are born in " + day + " / " + month + " so, your horoscope is " + horo + " ." )
 
+    }
 }
+
+// connect the javascript file with button click
+var startButton = document
+  .querySelector("#startHoroscope")
+  .addEventListener("click", () => {
+    this.startHoroscope(); });
