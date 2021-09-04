@@ -21,8 +21,8 @@ const edit_taskname = function(i){
   let textArea = document.createElement('input');
   textArea.style.width = td_name.width + 'px';
   textArea.style.height = td_name.height + 'px';
-  textArea.id = 'taskname_input'
   textArea.className = 'form-control';
+  textArea.value = td_name.innerHTML;
   td_name.innerHTML = '';
   
   td_name.appendChild(textArea);
@@ -88,7 +88,9 @@ const editTask = function(i){
    SaveButton.onclick = function(){
      tasks[i].name = document.querySelectorAll("#taskname_table")[i].firstChild.value;
      tasks[i].priority = document.querySelectorAll("#priority_table")[i].firstChild.value;
+     if (tasks[i].name !== '' && tasks[i].priority >0){
      renderTable();
+     }
    }
    
    let CancelButton = document.querySelectorAll("#cancel")[i];
